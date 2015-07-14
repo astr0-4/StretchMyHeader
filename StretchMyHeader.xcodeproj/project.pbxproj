@@ -15,6 +15,9 @@
 		FA2408A01B555B9E0059FD0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA24089F1B555B9E0059FD0A /* Images.xcassets */; };
 		FA2408A31B555B9E0059FD0A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2408A11B555B9E0059FD0A /* LaunchScreen.xib */; };
 		FA2408AF1B555B9E0059FD0A /* StretchMyHeaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2408AE1B555B9E0059FD0A /* StretchMyHeaderTests.m */; };
+		FA2408BA1B555BE40059FD0A /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2408B91B555BE40059FD0A /* NewsCell.m */; };
+		FA2408BD1B557ADE0059FD0A /* NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2408BC1B557ADE0059FD0A /* NewsItem.m */; };
+		FA2408BF1B5591DA0059FD0A /* bg-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2408BE1B5591DA0059FD0A /* bg-header.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,11 @@
 		FA2408A81B555B9E0059FD0A /* StretchMyHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StretchMyHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2408AD1B555B9E0059FD0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2408AE1B555B9E0059FD0A /* StretchMyHeaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchMyHeaderTests.m; sourceTree = "<group>"; };
+		FA2408B81B555BE40059FD0A /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		FA2408B91B555BE40059FD0A /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		FA2408BB1B557ADE0059FD0A /* NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
+		FA2408BC1B557ADE0059FD0A /* NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
+		FA2408BE1B5591DA0059FD0A /* bg-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-header.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +94,17 @@
 			children = (
 				FA2408931B555B9E0059FD0A /* AppDelegate.h */,
 				FA2408941B555B9E0059FD0A /* AppDelegate.m */,
+				FA2408BB1B557ADE0059FD0A /* NewsItem.h */,
+				FA2408BC1B557ADE0059FD0A /* NewsItem.m */,
+				FA2408B81B555BE40059FD0A /* NewsCell.h */,
+				FA2408B91B555BE40059FD0A /* NewsCell.m */,
 				FA2408961B555B9E0059FD0A /* MasterViewController.h */,
 				FA2408971B555B9E0059FD0A /* MasterViewController.m */,
 				FA2408991B555B9E0059FD0A /* DetailViewController.h */,
 				FA24089A1B555B9E0059FD0A /* DetailViewController.m */,
 				FA24089C1B555B9E0059FD0A /* Main.storyboard */,
 				FA24089F1B555B9E0059FD0A /* Images.xcassets */,
+				FA2408BE1B5591DA0059FD0A /* bg-header.jpg */,
 				FA2408A11B555B9E0059FD0A /* LaunchScreen.xib */,
 				FA24088F1B555B9E0059FD0A /* Supporting Files */,
 			);
@@ -207,6 +220,7 @@
 				FA24089E1B555B9E0059FD0A /* Main.storyboard in Resources */,
 				FA2408A31B555B9E0059FD0A /* LaunchScreen.xib in Resources */,
 				FA2408A01B555B9E0059FD0A /* Images.xcassets in Resources */,
+				FA2408BF1B5591DA0059FD0A /* bg-header.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +241,8 @@
 				FA2408951B555B9E0059FD0A /* AppDelegate.m in Sources */,
 				FA2408981B555B9E0059FD0A /* MasterViewController.m in Sources */,
 				FA2408921B555B9E0059FD0A /* main.m in Sources */,
+				FA2408BD1B557ADE0059FD0A /* NewsItem.m in Sources */,
+				FA2408BA1B555BE40059FD0A /* NewsCell.m in Sources */,
 				FA24089B1B555B9E0059FD0A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
