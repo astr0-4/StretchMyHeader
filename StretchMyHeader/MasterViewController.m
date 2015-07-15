@@ -12,12 +12,17 @@
 #import "NewsItem.h"
 
 @interface MasterViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *date;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *date;
+@property (strong, nonatomic) UIView *headerView;
 @property NSMutableArray *newsItems;
+
 @end
 
 @implementation MasterViewController
+
+const CGFloat kTableHeaderHeight = 300;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -67,8 +72,15 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 40;
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-
+    self.headerView = self.tableView.tableHeaderView;
+    self.tableView.tableHeaderView = nil;
     
+    [self.tableView setContentInset:UIEdgeInsetsMake(kTableHeaderHeight, 0, 0, 0)];
+
+    [self updateHeaderView];
+
+    [self.tableView addSubview:self.headerView];
+
     [self.view layoutIfNeeded];
 
 }
@@ -101,6 +113,26 @@
     }
 }
 
+#pragma update header view
+-(void)updateHeaderView {
+    CGFloat myOffset = self.tableView.contentOffset.y;
+    NSLog(@"%f", myOffset);
+    if (myOffset < -kTableHeaderHeight) {
+         self.headerView.frame = CGRectMake(0, myOffset, CGRectGetWidth(self.tableView.frame), -myOffset);
+    }
+    else {
+        self.headerView.frame = CGRectMake(0, -kTableHeaderHeight, CGRectGetWidth(self.tableView.frame),kTableHeaderHeight);
+    }
+}
+
+
+#pragma scrollView delegate method
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    [self updateHeaderView];
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -108,6 +140,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return self.newsItems.count;
 }
 

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController<UIScrollViewDelegate>
 
+extern const CGFloat kTableHeaderHeight;
 
 @end
 
